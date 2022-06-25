@@ -1,7 +1,7 @@
 <html>
 
 <body>
-<p>In my experience, getting audio to work on the RPI Zero W is problematic.&nbsp; Here are the instructions that I have found work most of the time.&nbsp;</p>
+<p>In my experience, getting audio to work on the RPI Zero W is problematic.&nbsp; Here are the instructions that I have found work most of the time.  Once audio is working, use crontab to run the python script each time your device reboots.  This way you dont need to interact with the device in order to play the desired audio.&nbsp;</p>
 
 <h3>&nbsp;</h3>
 
