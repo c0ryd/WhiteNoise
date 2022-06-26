@@ -17,13 +17,13 @@ def play_audio(sound):
     sound.play()
     time.sleep(1)
 
-def change_volume(button,p):
+def change_volume(button,sound):
     global volume
     if(button==VolumeUp):
         volume=volume+1
     else:
         volume=volume-1
-    p.audio_set_volume(volume)
+    sound.audio_set_volume(volume)
 
 def debounce(button):
     global debounceTime
@@ -36,7 +36,7 @@ def debounce(button):
 
 print("ready")
 while True:
-    if(is_playing):
+    if(!is_playing):
         if(play.is_pressed):
             if(debounce(play)):
                 sound=vlc.MediaPlayer(audioFile)
@@ -53,8 +53,8 @@ while True:
         while(VolumeUp.is_pressed):
             if(debounce(VolumeUp)):
                 print("Volume Up")
-                change_volume(VolumeUp,p)
+                change_volume(VolumeUp,sound)
         while(VolumeDown.is_pressed):
             if(debounce(VolumeDown)):
                 print("Volume Down")
-                change_volume(VolumeDown,p)
+                change_volume(VolumeDown,sound)
