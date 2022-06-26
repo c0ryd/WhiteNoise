@@ -5,7 +5,7 @@ import time
 play = Button(4,pull_up=False)
 VolumeUp = Button(27,pull_up=False)
 VolumeDown = Button(17,pull_up=False)
-audioFile = '/Users/cory/SynologyDrive/Project/sleep.mp3'
+audioFile = '/home/pi/Music/sleep.mp3'
 is_playing = False
 defaultVolume = 50
 debounceTime = .07
